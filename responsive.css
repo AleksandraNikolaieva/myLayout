@@ -1,0 +1,53 @@
+@media(max-width: 991px) {
+    #about > div {
+        width: 35%;
+    }
+
+    #skills {
+        width: 55%;
+    }
+
+    #portfolio > div {
+        width: 90%;
+    }
+
+    #portfolio > div > div {
+        width: 48%;
+        margin: 1%;
+    }
+
+    #contacts > form {
+        width: 95%;
+    }
+}
+
+@media(max-width: 767px) {
+    #about {
+        flex-direction: column;
+    }
+
+    #about > div {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+
+    #skills {
+        width: 90%;
+        margin: auto;
+    }
+
+    #portfolio > div {
+        width: 100%;
+    }
+
+    #portfolio > div > div {
+        width: 48%;
+        height: 100%;
+        margin: 1%;
+    }
+    #contacts .contacts {
+        width: 90%
+    }
+}
+
