@@ -206,6 +206,7 @@ progress[value]::-webkit-progress-value {
     text-align: center;
     font-family: Righteous, cursive;
     padding-top: 50px;
+    border-bottom: 1px solid black;
 }
 
 #portfolio > div {
@@ -234,7 +235,7 @@ progress[value]::-webkit-progress-value {
 #contacts {
     text-align: center;
     font-family: Righteous, cursive;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 #contacts .contacts {
