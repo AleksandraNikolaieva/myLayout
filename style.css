@@ -34,6 +34,10 @@ input, textarea, button {
     font-family: 'Open Sans', sans-serif;
 }
 
+input:focus, textarea:focus {
+    outline: none;
+}
+
 a {
     text-decoration: none;
 }
@@ -106,14 +110,19 @@ header button {
     bottom: 50px;
 }
 
-#home > div > p {
-    font-size: 5vh;
-    margin: 0px;
-}
-
 #home> div > h1 {
     font-size: 8vh;
     margin: 30px 0;
+    opacity: 0;
+    animation: appearance 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+#home > div > h3 {
+    opacity: 0;
+    animation: appearance 1s;
+    animation-fill-mode: forwards;
 }
 
 .contacts {
@@ -121,6 +130,10 @@ header button {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    opacity: 0;
+    animation: appearance 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
 }
 
 .contacts > a {
@@ -156,18 +169,25 @@ header button {
 #about > div {
     width: 30%;
     margin: 2%;
-    text-align: justify;
 }
 
 #about p {
     line-height: 2;
     margin: 50px 0;
+    text-align: justify;
 }
 
 #about > div > a {
-    padding: 2vh;
+    padding: 20px;
     background-color: #000000;
     color: #ffffff;
+    transition: background-color 2s;
+}
+
+#about > div > a:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid black;
 }
 
 #skills {
@@ -194,16 +214,25 @@ header button {
 
 progress[value] {
     width: 100%;
-    height: 10px;
+    height: 15px;
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
-    transition: all 2s ease-out;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    animation: progress 2s;
 }
 
 progress[value]::-webkit-progress-bar {
     background-color: #eee;
     border-radius: 2px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-moz-progress-bar {
+    background:
+    -moz-linear-gradient(left, #caccce, #000000);
+    border-radius: 2px;
 }
 
 progress[value]::-webkit-progress-value {
@@ -238,6 +267,7 @@ progress[value]::-webkit-progress-value {
     height: 100%;
     background-color: rgba(0,0,0,0.8);
     position: absolute;
+    animation: appearance 0.5s;
     top: 0px;
     left: 0px;
 }
@@ -299,7 +329,7 @@ progress[value]::-webkit-progress-value {
 }
 
 #contacts > div > div > div:hover {
-    transform: scale(1.5);
+    transform: rotate(-45deg) scale(1.5);
 }
 
 #contacts > div > div > div > a {
@@ -356,11 +386,11 @@ progress[value]::-webkit-progress-value {
 footer {
     height: 100px;
     background-color: #111111;
-    color: #ffff;
 }
 
 footer small {
     line-height: 100px;
+    color: #ffffff;
 }
 
 ::-webkit-scrollbar {
@@ -368,13 +398,27 @@ footer small {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: #f1f1f100; 
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #888888; 
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #f5f5f0;
+}
+
+@keyframes progress {
+    from {width: 0%;}
+    to {width: 100%;}
+}
+
+@keyframes appearance {
+    0% {opacity: 0;}
+    25% {opacity: 0.25;}
+    50% {opacity: 0.5;}
+    75% {opacity: 0.75;}
+    100% {opacity: 1;}
 }

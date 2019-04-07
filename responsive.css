@@ -1,4 +1,4 @@
-@media(max-width: 1200px) {
+@media(max-width: 1199px) {
     #contacts > div {
         flex-direction: column;
     }
@@ -35,7 +35,6 @@
     #about > div {
         width: 90%;
         margin: auto;
-        text-align: center;
     }
 
     #skills {
@@ -59,9 +58,9 @@
 
     nav {
         display: none;
-        margin-top: 130px;
-        margin-left: -13px;
         position: absolute;
+        top: 60px;
+        left: 0px;
         width: 100%;
         background-color: #000000;
     }
@@ -78,7 +77,6 @@
 
     nav > ul > li > a {
         color: #ffffff;
-        text-decoration: none;
         display: block;
         line-height: 50px;
     }
