@@ -363,10 +363,6 @@ meter::-moz-meter-bar {
     width: 100%;
 }
 
-#contacts > form input {
-    margin: 1vh 0;
-}
-
 #contacts > form > div div {
     display: flex;
     flex-direction: column;
