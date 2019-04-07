@@ -1,8 +1,9 @@
 @media(max-width: 1200px) {
-    #contacts .contacts {
+    #contacts > div {
         flex-direction: column;
     }
 }
+
 @media(max-width: 991px) {
     #about > div {
         width: 35%;
@@ -51,8 +52,47 @@
         height: 100%;
         margin: 1%;
     }
-    #contacts .contacts {
+
+    #contacts > div {
         width: 90%
+    }
+
+    nav {
+        display: none;
+        margin-top: 130px;
+        margin-left: -13px;
+        position: absolute;
+        width: 100%;
+        background-color: #000000;
+    }
+
+    nav > ul {
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    nav > ul > li {
+        height: 50px;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    nav > ul > li > a {
+        color: #ffffff;
+        text-decoration: none;
+        display: block;
+        line-height: 50px;
+    }
+
+    header button {
+        display: inline!important;
+    }
+
+    header button:hover + nav {
+        display: block;
+    }
+
+    nav:hover {
+        display: block;
     }
 }
 
