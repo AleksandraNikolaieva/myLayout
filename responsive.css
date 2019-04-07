@@ -88,9 +88,5 @@
     header button:hover + nav {
         display: block;
     }
-
-    nav:hover {
-        display: block;
-    }
 }
 
