@@ -2,6 +2,10 @@
     #contacts > div {
         flex-direction: column;
     }
+
+    #portfolio > div > div div > p {
+        font-size: 1em;
+    }
 }
 
 @media(max-width: 991px) {
@@ -54,10 +58,6 @@
 
     #contacts > div {
         width: 90%
-    }
-
-    #portfolio > div > div div > p {
-        font-size: 1em;
     }
 
     nav {

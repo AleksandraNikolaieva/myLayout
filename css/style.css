@@ -97,7 +97,7 @@ header button {
 #home {
     height: 100vh;
     margin-top: 60px;
-    background-image: url(./images/background.jpg);
+    background-image: url(../images/background.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
