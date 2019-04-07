@@ -97,7 +97,7 @@ header button {
 #home {
     height: 100vh;
     margin-top: 60px;
-    background-image: url(./images/DS\ -10.jpg);
+    background-image: url(./images/background.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -183,6 +183,9 @@ header button {
     padding: 20px;
     background-color: #000000;
     color: #ffffff;
+    -webkit-transition: background-color 2s;
+    -moz-transition: background-color 2s;
+    -o-transition: background-color 2s;
     transition: background-color 2s;
 }
 
@@ -219,6 +222,9 @@ meter {
     -moz-appearance: none;
     -webkit-appearence: none;
     appearance: none;
+    -webkit-animation: progress 2s;
+    -moz-animation: progress 2s;
+    -o-animation: progress 2s;
     animation: progress 2s;
     background: #f2f2f2;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
@@ -253,15 +259,21 @@ meter::-moz-meter-bar {
     flex-wrap: wrap;
     justify-content: space-around;
     width: 80%;
+    height: 100%;
     margin: 40px auto;
 }
 
 #portfolio > div > div {
     width: 30%;
-    height: 100%;
+    height: auto;
     margin: 1%;
     box-shadow: 0 0 8px #ccc;
     position: relative;
+}
+
+#portfolio > div > div > img {
+    width: 100%;
+    height: auto;
 }
 
 #portfolio > div > div div {
@@ -270,6 +282,9 @@ meter::-moz-meter-bar {
     height: 100%;
     background-color: rgba(0,0,0,0.8);
     position: absolute;
+    -webkit-animation: appearance 2s;
+    -moz-animation: appearance 2s;
+    -o-animation: appearance 2s;
     animation: appearance 0.5s;
     top: 0px;
     left: 0px;
@@ -293,11 +308,6 @@ meter::-moz-meter-bar {
 
 #portfolio > div > div:hover div {
     display: block;
-}
-
-#portfolio > div > div > img {
-    width: 100%;
-    height: auto;
 }
 
 #contacts {
