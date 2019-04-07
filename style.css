@@ -80,34 +80,34 @@ nav > ul > li > a {
     color: #000000;
 }
 
-nav > ul > li > a:active {
+nav > ul > li > a:active,
+nav > ul > li > a:hover {
     font-weight: bold;
 }
 
 header button {
-    display: none!important;
     height: 60px;
     width: 60px;
     font-size: 35px;
     padding: 0px;
     background: none;
+    display: none!important;
 }
 
 #home {
-    height: 93vh;
+    height: 100vh;
     margin-top: 60px;
     background-image: url(./images/DS\ -10.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    text-transform: uppercase;
     position: relative;
 }
 
 #home > div {
     width: 100%;
     position: absolute;
-    bottom: 50px;
+    bottom: 100px;
 }
 
 #home> div > h1 {
@@ -115,13 +115,15 @@ header button {
     margin: 30px 0;
     opacity: 0;
     animation: appearance 1s;
-    animation-delay: 1s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
 }
 
 #home > div > h3 {
+    text-transform: uppercase;
     opacity: 0;
     animation: appearance 1s;
+    animation-delay: 0.5s;
     animation-fill-mode: forwards;
 }
 
@@ -132,8 +134,18 @@ header button {
     width: 100%;
     opacity: 0;
     animation: appearance 1s;
-    animation-delay: 1.5s;
+    animation-delay: 2.5s;
     animation-fill-mode: forwards;
+}
+
+.contacts::before,
+.contacts::after {
+    content: '';
+    height: 1px;
+    background-color: #000000;
+    width: 28%;
+    transform: translateY(2vh);
+    margin: 0 10px;
 }
 
 .contacts > a {
@@ -144,16 +156,6 @@ header button {
 
 .contacts > a:hover {
     transform: translateY(-10px);
-}
-
-#home .contacts::before,
-#home .contacts::after {
-    content: '';
-    height: 1px;
-    background-color: #000000;
-    width: 28%;
-    transform: translateY(2vh);
-    margin: 0 10px;
 }
 
 #about {
@@ -212,30 +214,31 @@ header button {
     margin: 5px 0px;
 }
 
-progress[value] {
+meter {
     width: 100%;
-    height: 15px;
-    -webkit-appearance: none;
     -moz-appearance: none;
+    -webkit-appearence: none;
     appearance: none;
+    animation: progress 2s;
+    background: #f2f2f2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    border: none;
+}
+
+meter::-webkit-meter-bar {
+    background: none;
+    background-color: #f2f2f2;
     border: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
-    animation: progress 2s;
 }
 
-progress[value]::-webkit-progress-bar {
-    background-color: #eee;
-    border-radius: 2px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
-}
-
-progress[value]::-moz-progress-bar {
+meter::-webkit-meter-optimum-value {
     background:
-    -moz-linear-gradient(left, #caccce, #000000);
+    -webkit-linear-gradient(left, #caccce, #000000);
     border-radius: 2px;
 }
 
-progress[value]::-webkit-progress-value {
+meter::-moz-meter-bar {
     background:
     -webkit-linear-gradient(left, #caccce, #000000);
     border-radius: 2px;
@@ -404,10 +407,6 @@ footer small {
 ::-webkit-scrollbar-thumb {
     background: #888888; 
     border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #f5f5f0;
 }
 
 @keyframes progress {
