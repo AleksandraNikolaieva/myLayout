@@ -390,6 +390,7 @@ meter::-moz-meter-bar {
     color: #ffffff;
     border-radius: 5px;
     padding: 2vh;
+    margin-bottom: 10px;
 }
 
 footer {
