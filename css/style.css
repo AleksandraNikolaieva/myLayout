@@ -183,10 +183,11 @@ header button {
     padding: 20px;
     background-color: #000000;
     color: #ffffff;
-    -webkit-transition: background-color 2s;
-    -moz-transition: background-color 2s;
-    -o-transition: background-color 2s;
-    transition: background-color 2s;
+    border-radius: 5px;
+    -webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    transition: background-color 1s;
 }
 
 #about > div a:hover {
@@ -376,6 +377,13 @@ meter::-moz-meter-bar {
     border-radius: 5px;
     padding: 1vh;
     margin-bottom: 2vh;
+    box-shadow: none;
+    transition: box-shadow 0.3s;
+}
+
+#contacts > form > div div > input:focus,
+#contacts > form textarea:focus {
+    box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 #contacts > form textarea {
@@ -389,8 +397,15 @@ meter::-moz-meter-bar {
     background-color: #000000;
     color: #ffffff;
     border-radius: 5px;
-    padding: 2vh;
+    padding: 20px 0;
     margin-bottom: 10px;
+    transition: background-color 1s;
+}
+
+#contacts > form > input[type='submit']:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid black;
 }
 
 footer {
