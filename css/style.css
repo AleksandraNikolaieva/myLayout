@@ -40,6 +40,7 @@ input:focus, textarea:focus {
 
 a {
     text-decoration: none;
+    color: #000000;
 }
 
 header {
@@ -80,8 +81,7 @@ nav > ul li a {
     color: #000000;
 }
 
-nav > ul li a:active,
-nav > ul li a:hover {
+nav > ul li a:active {
     font-weight: bold;
 }
 
@@ -179,21 +179,23 @@ header button {
     text-align: justify;
 }
 
-#about > div a {
+#about > div > a {
     padding: 20px;
     background-color: #000000;
     color: #ffffff;
     border-radius: 5px;
-    -webkit-transition: background-color 1s;
-    -moz-transition: background-color 1s;
-    -o-transition: background-color 1s;
+    border: 1px solid black;
     transition: background-color 1s;
 }
 
-#about > div a:hover {
+#about > div > a:hover {
     background-color: #ffffff;
     color: #000000;
-    border: 1px solid black;
+}
+
+#about > div > p > a {
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 #skills {
@@ -256,25 +258,19 @@ meter::-moz-meter-bar {
 }
 
 #portfolio > div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     width: 80%;
-    height: 100%;
     margin: 40px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 #portfolio > div > div {
     width: 30%;
     height: auto;
-    margin: 1%;
+    margin: 5px;
     box-shadow: 0 0 8px #ccc;
     position: relative;
-}
-
-#portfolio > div > div:hover {
-    transform: scale(1.2);
-    z-index: 2;
 }
 
 #portfolio > div > div:hover div {
@@ -340,6 +336,7 @@ meter::-moz-meter-bar {
     transform: rotate(-45deg);
     border-radius: 5px;
     margin: 20px;
+    transition: transform 0.3s;
 }
 
 #contacts > div > div > div:hover {
@@ -396,6 +393,7 @@ meter::-moz-meter-bar {
     width: 50%;
     background-color: #000000;
     color: #ffffff;
+    border: 1px solid black;
     border-radius: 5px;
     padding: 20px 0;
     margin-bottom: 10px;
@@ -404,8 +402,7 @@ meter::-moz-meter-bar {
 
 #contacts > form > input[type='submit']:hover {
     background-color: #ffffff;
-    color: #000000;
-    border: 1px solid black;
+    color: black;
 }
 
 footer {
@@ -416,6 +413,18 @@ footer {
 footer small {
     line-height: 100px;
     color: #ffffff;
+}
+
+body > a {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    mix-blend-mode: luminosity;
+}
+
+body > a img {
+    width: 30px;
+    height: 30px;
 }
 
 ::-webkit-scrollbar {
