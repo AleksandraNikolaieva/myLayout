@@ -225,10 +225,6 @@ meter {
     -moz-appearance: none;
     -webkit-appearence: none;
     appearance: none;
-    -webkit-animation: progress 2s;
-    -moz-animation: progress 2s;
-    -o-animation: progress 2s;
-    animation: progress 2s;
     background: #f2f2f2;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
     border: none;
@@ -251,6 +247,13 @@ meter::-moz-meter-bar {
     background:
     -webkit-linear-gradient(left, #caccce, #000000);
     border-radius: 2px;
+}
+
+.animate-progress {
+    -webkit-animation: progress 2s;
+    -moz-animation: progress 2s;
+    -o-animation: progress 2s;
+    animation: progress 2s;
 }
 
 #portfolio {
